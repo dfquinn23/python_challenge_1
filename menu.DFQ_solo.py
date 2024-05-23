@@ -52,6 +52,7 @@ menu = {
 
 # 1. Set up order list. Order list will store a list of dictionaries for
 # menu item name, item price, and quantity ordered
+order_list = [] #DFQ code
 
 
 # Launch the store and present a greeting to the customer
@@ -118,42 +119,67 @@ while place_order:
                     }
                     i += 1
             # 2. Ask customer to input menu item number
-
-
+            menu_selection = input("Please enter the number of the menu item you want: ") #DFQ Code
+          
             # 3. Check if the customer typed a number
-
-                # Convert the menu selection to an integer
-
+            if menu_selection.isdigit():  #DFQ Code
+                    # Convert the menu selection to an integer
+                    menu_selection = int(menu_selection) #DFQCode
+                    if (menu_selection) in menu.keys(): False #DFQCode
+                    print("You have made an incorrect selection.") #DFQ Code
+            elif (menu_selection) in menu.keys(): True
+            print("You have chosen {menu_selection}.")
 
                 # 4. Check if the menu selection is in the menu items
+            if menu_selection in menu.keys(): False
+            print("You have made an incorrect choice. Please try again. ")
+            
+    elif:
+    menu_selection in menu.keys(): True:
+
+                    #get the item name from the menu_items dictionary and store as a variable
+                    #ask for quantity of the menu item, using the item name variable in question,
+                    #letting them know that the quantity will default to 1 if their input is invalid.
+                    #Save their answer as var = quantity
+
+    print(f"You have selected {menu_selection}")
+    elif
+            print("You have made an invalid selection. Please choose again. ")
 
                     # Store the item name as a variable
-
+    customer_menu_selection = customer_menu_selection   #DFQCode
 
                     # Ask the customer for the quantity of the menu item
-
+    quantity = input("How many would you like to purchase?")#DFQ Code
 
                     # Check if the quantity is a number, default to 1 if not
+    if quantity isdigit():
+                        print("You have selected {quantity}. ")
+    else:
+                print("You have selected 1. ")
+                quantity = 1
 
 
                     # Add the item name, price, and quantity to the order list
-
+                    
 
                     # Tell the customer that their input isn't valid
+                print("Your input is not valid.\n") #DFQCode
 
 
                 # Tell the customer they didn't select a menu option
+                print("You did not select a menu option. ") #DFQCode
 
-        else:
-            # Tell the customer they didn't select a menu option
-            print(f"{menu_category} was not a menu option.")
     else:
+            # Tell the customer they didn't select a menu option
+    print(f"{menu_category} was not a menu option.")
+else:
         # Tell the customer they didn't select a number
         print("You didn't select a number.")
 
-    while True:
+        while True:
         # Ask the customer if they would like to order anything else
-        keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
+            keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
 
